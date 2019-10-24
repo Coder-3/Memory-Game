@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #214791, #2E8F88, #13867E, #7563B7);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+  font-family: 'open_sansregular';
+}
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("fonts/OpenSans-Regular-webfont.woff") format("woff");
+}
+
+.owlDiv {
+  position: absolute;
+  margin-top: 5%;
+  width: 20%;
+  left: 50%;
+  margin-left: -10%;
+}
+
+.owlLogo {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.memory-game {
+  width: 60%;
+  height: 60%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: 23%;
+  height: auto;
+  margin: 20px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+  zoom: 0.2;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  position: absolute;
+  border-radius: 5px;
+  background: #214791;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.buttonClassMenu {
+  margin: 0 auto;
+  margin-top: calc(50vh - 5%);
+  width: 20%;
+  height: 10%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.gameModeDiv {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+  height: 65%;
+  background: #2E8F88;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonClassMain {
+  margin: 10px;
+  align-self: center;
+  display: block;
+  width: 100%;
+  height: 14.7%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.buttonClassCategory {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  bottom: 10%;
+  right: 40vw;
+  font-size: 1.5em;
+  color: white;
+}
+
+.buttonPrevious {
+  position: fixed;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  height: 5%;
+  width: auto;
+  bottom: 5;
+  right: 0.5%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  color: white;
+}
+
+.buttonHome {
+  position: fixed;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  height: 5%;
+  width: auto;
+  bottom: 5;
+  left: 0.5%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  color: white;
+}
+
+.buttonHomeInGame {
+  position: fixed;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px;
+  height: 5%;
+  width: auto;
+  bottom: 5;
+  left: 0.5%;
+  background: #214791;
+  border: 2px solid #214791;
+  border-radius: 5px;
+  color: white;
+}
+
+.buttonClassMenu:hover, .buttonClassMain:hover, .buttonClassCategory:hover, .buttonPrevious:hover , .buttonHome:hover, .buttonHomeInGame:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+	transform: scale(1.08,1.08);
+}
+
+#myProgress {
+    position: fixed;
+    right: 0;
+    width: 50%;
+    height: 30px;
+    background-color: grey;
+}
+
+#myBar {
+    position: fixed;
+    right: 0;
+    width: 1%;
+    height: 30px;
+    background-color: #214791;
+}
+
+.headAndParaDiv, .gameOverDiv {
+  margin-top: 5%;
+  width: 50%;
+  height: 60%;
+  background: #214791;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.InstructionsHeading, .timeUp {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 2.5em;
+}
+
+.Instructions, .gameOver {
+  margin: 5%;
+  text-align: center;
+  font-size: 2em;
+}
+
+.scoreCounter {
+  position: absolute;
+  top: 1%;
+  color: white;
+  left: 1%;
+  font-size: 2em;
+  background: #22479C;
+  border-color: #36569F;
+  border-radius: 5px;
+  width: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+/*
+  Following code from: https://codepen.io/P1N2O/pen/pyBNzX
+*/
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}

@@ -1,0 +1,72 @@
+##Still working on
+- Fixing progress bar
+- Landscape orientation not working on new Chrome 69.0.3497.100
+
+## [1.0.0] - 2018-09-21
+### Added
+- Animated background (UI Design)
+- Button hover animation (UI Design)
+- Music in game (UI Design)
+- Sound on button click (UI Design)
+
+## [0.9.0] - 2018-09-20
+### Changed
+- Instructions page for time attack and normal gamemodes to make use of gameData.js object. (Quality)
+- Grouping styling of common buttons. (UI Design / Code Quality)
+- Responsivity. (UI Layout)
+
+## [0.8.0] - 2018-09-19
+### Added
+- gameData.js containing all of the intruction text and classes. (Code Quality)
+
+### Changed
+- Refactoring and commenting code. (Code Quality)
+
+## [0.7.0] - 2018-09-18
+### Added
+- Instructions page for time attack and normal game modes. (Quality)
+
+### Fixed
+- Instructions pages responsitivty glitches. (UI Layout)
+
+## [0.6.0] - 2018-09-16
+### Added
+- End game function to be called when timer runs out. (Quality)
+
+### Changed
+- Adapting score to integrate with end game page. (Quality)
+
+## [0.5.0] 2018-09-14
+### Added
+- Progress bar and related function calls + relevant styling. (Quality / UI Design)
+- Home button on most screens. (UI Design)
+- Previous button in game to go back. (Quality)
+
+## [0.4.0] - 2018-09-12
+### Changed
+- All the styling and color schemes. (UI Design)
+- Buttons changed color and made more aesthetic. (UI Design)
+- Divs added for UI elements for easier positioning and styling. (UI Layout)
+
+### Added
+- Open Sans font. (UI Design)
+
+## [0.3.0] 2018-09-06
+### Added
+- More levels: nextLevel, previousLevel. (Playable Levels)
+- More SVGs to cater for those levels. (Playable Levels)
+- cardsPerLevel array. (Playable Levels)
+
+### Changed
+- createSection now allows for more cards to be created as a function of the level. (Playable Levels)
+
+## [0.2.0] 2018-09-01
+### Added
+- gameModePage where all the modes are presented (Quality / Playability)
+- Relevant styling (UI Design / UI Layout)
+
+## [0.1.0] 2018-08-12
+### Added
+- Fundamental game logic: flipCard, checkForMatch, disableCards, unflipCards, resetBoard, 
+event listeners, createLevel. (Playability / Code Quality)
+- CSS to make the cards flip, styling of the cards and the look of the game screen. (UI Layout / UI Design)
