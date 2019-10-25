@@ -200,7 +200,7 @@ createSection = function(url) {
   var score = createP("Score: " + scoreCounter, 'scoreCounter');
   document.body.appendChild(score);
 
-  var homeButton = createButton('Home', 'buttonHomeInGame');
+  var homeButton = createButton('Home', 'buttonHome');
   homeButton.onclick = function() { createMenu(); playSound("sounds/whoosh.wav", false); };
   document.body.appendChild(homeButton);
 
