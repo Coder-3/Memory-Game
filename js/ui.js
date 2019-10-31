@@ -9,14 +9,12 @@
   Returns: paragraph element.
 */
 window.createP = function(paragraphText, paragraphClass) {
-  console.log("createP(): Started...");
   var Paragraph = document.createElement("P");
   var textNode4 = document.createTextNode(paragraphText);
   Paragraph.appendChild(textNode4);
   Paragraph.classList.add(paragraphClass)
 
   return Paragraph;
-  console.log("createP(): Ended...");
 }
 
 /*
@@ -30,14 +28,12 @@ window.createP = function(paragraphText, paragraphClass) {
   Returns: heading one element.
 */
 window.createHeading1 = function(titleText, headingOneClass) {
-  console.log("CreateHeading1(): Started...");
   var Heading = document.createElement("H1");
   var textNode = document.createTextNode(titleText);
   Heading.appendChild(textNode);
   Heading.classList.add(headingOneClass);
 
   return Heading;
-  console.log("CreateHeading1(): Ended...");
 }
 
 /*
@@ -51,13 +47,11 @@ window.createHeading1 = function(titleText, headingOneClass) {
   Returns: button element.
 */
 window.createButton = function(buttonText, buttonClass) {
-  console.log("createButton() started");
   var button = document.createElement("button");
   var textNode = document.createTextNode(buttonText);
   button.classList.add(buttonClass);
   button.appendChild(textNode);
 
-  console.log("createButton() ended");
 
   return button;
 }
