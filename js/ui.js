@@ -52,7 +52,6 @@ window.createButton = function(buttonText, buttonClass) {
   button.classList.add(buttonClass);
   button.appendChild(textNode);
 
-
   return button;
 }
 
