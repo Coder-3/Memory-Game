@@ -1,7 +1,3 @@
-Student Name: Antoine Stephan Cedric Quenette
-SID: 218043304
-
-
 App Title: Memory Game
 
 Overview:
