@@ -122,9 +122,9 @@ createLevel = function(imageSource, dataAttribute) {
 /*
   Purpose: If progressBar global variable is true, create two divs, one appended
   to the other and then appended to the body. Then set the width of the bar
-  element, then if the current with is less than the specified maximum, increase
+  element, then if the current width is less than the specified maximum, increase
   the width of the bar element. If it is greater or equal to the specified width,
-  clear the intervqal and call endGame();.
+  clear the interval and call endGame();.
 */
 drawProgressBar = function() {
   if(progressBar) {
@@ -139,7 +139,7 @@ drawProgressBar = function() {
 
     var elem = document.getElementById("myBar");
     var width = 1;
-    var timeRemaining = setInterval(frame, 1000);
+    window.timeRemaining = setInterval(frame, 1000);
     function frame() {
       if (width >= 50) {
           clearInterval(timeRemaining);
@@ -223,13 +223,14 @@ endGame = function() {
   var finalScoreParagraph = createP("Your final score was " + scoreCounter, "timeUp");
 
   var homeButton = createButton('Home', 'buttonHome');
-  homeButton.onclick = function() { createMenu(); playSound("sounds/whoosh.wav", false); };
+  homeButton.onclick = function() { createMenu(); playSound("sounds/whoosh.wav", false); clearInterval(timeRemaining); };
   document.body.appendChild(homeButton);
 
   document.body.appendChild(gameOverDiv);
   gameOverDiv.appendChild(gameOverHeading);
   gameOverDiv.appendChild(sorryParagraph);
   gameOverDiv.appendChild(finalScoreParagraph);
+  console.log(".");
 }
 
 // List of functions to load on window load
