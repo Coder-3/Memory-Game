@@ -59,7 +59,6 @@ window.playSound = function(source, loop) {
   Runs checkForMatch(); function.
 */
 window.flipCard = function() {
-  console.log("flipCard(); started");
   if(lockBoard) return;
   if(this === firstCard) ;
 

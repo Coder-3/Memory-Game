@@ -214,7 +214,6 @@ createSection = function(url) {
   a heading one and appends them to body.
 */
 endGame = function() {
-  console.log("endgamestarted");
   document.body.innerHTML = "";
   var gameOverDiv = document.createElement("div");
   gameOverDiv.classList.add("gameOverDiv");
@@ -230,7 +229,6 @@ endGame = function() {
   gameOverDiv.appendChild(gameOverHeading);
   gameOverDiv.appendChild(sorryParagraph);
   gameOverDiv.appendChild(finalScoreParagraph);
-  console.log(".");
 }
 
 // List of functions to load on window load
